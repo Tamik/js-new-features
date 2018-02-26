@@ -157,3 +157,5 @@ class B extends A {
 
 const b = new B(); // Ошибка!
 ```
+
+Также желательно к прочтению: [&laquo;Новые #приватные поля классов в JavaScript&raquo;](https://medium.com/devschacht/javascripts-new-private-class-fields-c60daffe361b)
