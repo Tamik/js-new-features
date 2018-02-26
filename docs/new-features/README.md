@@ -4,7 +4,7 @@
 
 - Цикл `for..of`
   - [&laquo;ES6: Цикл for .. of&raquo;](http://jsraccoon.ru/es6-for-of-loop)
-  - [%laquo;for..of loop%raquo;](http://putaindecode.io/en/articles/js/es2015/for-of/)
+  - [&laquo;for..of loop&raquo;](http://putaindecode.io/en/articles/js/es2015/for-of/)
 - [`Promise`](.//promise/README.md)
 - `async`, `await`
   - [&laquo;Async/await: 6 причин забыть о промисах&raquo;](https://habrahabr.ru/company/ruvds/blog/326074/)
