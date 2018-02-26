@@ -1,14 +1,15 @@
 # Новые возможности JavaScript — Синтаксический сахар
 
-Оглавление
+#### [Оглавление](../../CONTENTS.md)
 
-- [Новые типы переменных]
-  - [let]
-  - [const]
-- [Операторы `Spread`, `Rest`]
-- [Деструктурирующее присваивание]
-- [Значение параметров по умолчанию]
-- [Расширение объектных литералов]
-- [Стрелочные функции и их особенности]
-- [Шаблонные строки]
-- [Классы]
+- [Новые типы переменных](./variables/README.md)
+  - [let](./variables/let/README.md)
+  - [const](./variables/const/README.md)
+- [Классы](./classes/README.md)
+- [Стрелочные функции и их особенности](./arrow-functions/README.md)
+- [Параметры функции](./fn-parameters/README.md)
+- [Деструктурирующее присваивание](./object-destructering/README.md)
+- [Расширение объектных литералов](./object-literals/README.md)
+- [Оператор разворота](./spread/README.md)
+- [Оператор возведения в степень](./exponentation/README.md)
+- [Шаблонные строки](./template-strings/README.md)
