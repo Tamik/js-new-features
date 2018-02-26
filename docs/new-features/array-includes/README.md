@@ -1,7 +1,7 @@
 # Новые возможности JavaScript — `Array#includes`
 
-В ECMAScript 5 для поиска требуемого элемента в массива приходилось использовать
-метод `indexOf` или `some` (но мало кто знает о методах `some`/`every`).
+В ECMAScript 5 для поиска требуемого элемента в массиве приходилось использовать
+метод `indexOf` или `some` (при этом мало кто знает о методах `some`/`every`).
 
 Вот как это выглядело:
 
@@ -9,29 +9,23 @@
 const arr = [1, 2, 3, 4, 5];
 const searchElement = 5;
 
-const includes = arr.indexOf(searchElement) !== -1;
-
-console.log(includes); // true
+console.log(arr.indexOf(searchElement) !== -1); // true
 ```
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
 const searchElement = 5;
 
-const includes = arr.some(item => item === searchElement);
-
-console.log(includes); // true
+console.log(arr.some(item => item === searchElement)); // true
 ```
 
-Однако в ECMAScript 7 появился метод: `includes`. В него достаточно передать
-искомый элемент, и метод вернёт булево значение. В отличие от предыдущих двух методов
-теперь сравнивать текущий элемент массива с искомым не надо.
+Однако в ECMAScript 7 появился метод `includes`. В него достаточно передать искомый
+элемент, и метод вернёт `boolean` значение. В отличие от предыдущих двух методов теперь
+сравнивать текущий элемент массива с искомым не надо.
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
 const searchElement = 5;
 
-const includes = arr.includes(searchElement);
-
-console.log(includes); // true
+console.log(arr.includes(searchElement)); // true
 ```
