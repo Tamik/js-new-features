@@ -7,42 +7,42 @@
 благодаря оператору `Spread`, минуя использование метода `concat`.
 
 ```javascript
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
+const array = [1, 2, 3];
+const anotherArray = [4, 5, 6];
 
-console.log([arr1, arr2]); // [[1, 2, 3], [4, 5, 6]]
+console.log([array, anotherArray]); // [[1, 2, 3], [4, 5, 6]]
 
-console.log([...arr1, ...arr2]); // [1, 2, 3, 4, 5, 6]
+console.log([...array, ...anotherArray]); // [1, 2, 3, 4, 5, 6]
 ```
 
 Это так же работает и с объектами:
 
 ```javascript
-const obj1 = {
-  propOne: 1,
-  propTwo: 2,
+const obj = {
+  one: true,
+  two: true,
 };
 
-const obj2 = {
-  propThree: 3,
-  propFour: 4,
+const anotherObj = {
+  three: false,
+  four: false,
 };
 
-console.log({obj1, obj2}); // { obj1: { propOne: 1, propTwo: 2 }, obj2: { propThree: 3, propFour: 4 } }
+console.log({obj, anotherObj}); // {obj: {one: true, two: true}, anotherObj: {three: false, four: false}}
 
-console.log({...obj1, ...obj2}); // { propOne: 1, propTwo: 2, propThree: 3, propFour: 4 }
+console.log({...obj, ...anotherObj}); // {one: true, two: true, three: false, four: false}
 ```
 
 `Spread`-оператор так же удобен для передачи массивов в качестве аргументов функции.
 
 ```javascript
-const array = [1, 2, 3];
+const numbers = [1, 2, 3];
 
 function add(a, b, c) {
   return a + b + c;
 }
 
-console.log(add(array)); // 1,2,3undefinedundefined
+console.log(add(numbers)); // 1,2,3undefinedundefined
 
-console.log(add(...array)); // 6
+console.log(add(...numbers)); // 6
 ```

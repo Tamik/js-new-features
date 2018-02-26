@@ -65,7 +65,7 @@ function createElement(tagName, className, children) {
   `;
 }
 
-console.log(createElement(tag, class, children)); // \n <div class="i-bem">\n   Hello, world!\n </div>\n
+console.log(createElement(tag, class, children)); // <div class="i-bem">Hello, world!</div>
 ```
 
 В выражениях можно использовать различные операции (сложение, вычитание, и т.д.) и вызовы функций.  
@@ -87,8 +87,6 @@ console.log(add(1, '2')); // 1 + 2 = 3
 const name = 'Tamik';
 
 console.log(`Hello, ${name}!`); // Hello, Tamik!
-
-// Массив строковых литералов
 
 function upperName(literals, ...values) {
   return literals[0] + values[0].toUpperCase();
