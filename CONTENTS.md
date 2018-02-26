@@ -16,7 +16,7 @@
 - [Оператор возведения в степень](./docs/syntax-sugar/exponentation/README.md)
 - [Шаблонные строки](./docs/syntax-sugar/template-strings/README.md)
 
-## Новая функциональность
+## [Новая функциональность](./docs/new-features/README.md)
 
 - Цикл `for..of`
   - [&laquo;ES6: Цикл for .. of&raquo;](http://jsraccoon.ru/es6-for-of-loop)
