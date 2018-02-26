@@ -2,7 +2,13 @@
 
 #### [Оглавление](../../../CONTENTS.md)
 
-Классы — это новый синтаксический сахар.
+Классы — это новый синтаксический сахар. По сути это те же конструкторы функций
+с использованием прототипов, только приправленные типичным представлением в виде
+классов из ООП.  
+Классы не поднимаются (хойстинг). Тело класса может содержать только методы, но
+не свойства. Прототип, имеющий свойства, обычно считается анти-паттерном.  
+Так же поддерживают геттеры и сеттеры в соответствии с
+[объектными литералами](../object-literals/README.md).
 
 ```javascript
 function A(prop) {
@@ -61,9 +67,13 @@ function B() {
   // ...
 }
 
-A.prototype.prop = 1;
+A.prototype.prop = function () {
+  return 1;
+};
 
-B.prototype.anotherProp = 2;
+B.prototype.anotherProp = function() {
+  return 2;
+};
 
 // Задаём наследование
 B.prototype.__proto__ = A.prototype;
@@ -88,36 +98,62 @@ function B() {
   // ...
 }
 
-A.prototype.prop = 1;
+A.prototype.prop = function () {
+  return 1;
+};
 
 // Задаём наследование
 B.prototype = Object.create(A.prototype);
 
-B.prototype.anotherProp = 2;
+B.prototype.anotherProp = function () {
+  return 2;
+};
 
 var b = new B();
 
-console.log(b.prop); // 1
+console.log(b.prop()); // 1
 
-console.log(b.anotherProp); // 2
+console.log(b.anotherProp()); // 2
 ```
 
 ```javascript
 class A {
-  prop = 1;
-
   // ...
+
+  prop() {
+    return 1;
+  }
 }
 
 class B extends A {
-  anotherProp = 2;
-
   // ...
+
+  anotherProp() {
+    return 2;
+  }
 }
 
 const b = new B();
 
-console.log(b.prop); // 1
+console.log(b.prop()); // 1
 
-console.log(b.anotherProp); // 2
+console.log(b.anotherProp()); // 2
+```
+
+В классе-наследнике нужно вызвать `super()` до того, как обращаться к свойствам
+через `this`, иначе произойдёт ошибка.
+
+```javascript
+class A {
+  // ...
+}
+
+class B extends A {
+  constructor() {
+  }
+  
+  // ...
+}
+
+const b = new B(); // Ошибка!
 ```
