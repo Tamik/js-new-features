@@ -10,6 +10,7 @@
 примерно такую запись:
 
 ```javascript
+// ECMAScript 5
 var a = 5;
 var b = 5;
 
@@ -25,6 +26,7 @@ console.log(obj); // {a: 5, b: 5}
 одноимённых переменных происходит проще:
 
 ```javascript
+// ECMAScript 6
 const a = 5;
 const b = 5;
 
@@ -40,6 +42,7 @@ console.log(obj); // {a: 5, b: 5}
 ссылкой на функцию:
 
 ```javascript
+// ECMAScript 5
 var obj = {
   prop: true,
   fn: function(value) {
@@ -53,6 +56,7 @@ obj.fn(false); // false
 Теперь можно определять методы прямо в объекте:
 
 ```javascript
+// ECMAScript 6
 const obj = {
   prop: true,
   fn(value) {
@@ -66,6 +70,7 @@ obj.fn(false); // false
 Помимо прочего, появились геттеры и сеттеры:
 
 ```javascript
+// ECMAScript 6
 const obj = {
   __id: 1,
   get id() {
@@ -88,6 +93,7 @@ console.log(obj.__id); // 5
 Также появилась возможность использовать вычисляемые свойства:
 
 ```javascript
+// ECMAScript 6
 const appConst = 'string';
 
 const obj = {

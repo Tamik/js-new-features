@@ -8,6 +8,7 @@
 Вот как это выглядело:
 
 ```javascript
+// ECMAScript 5
 const arr = [1, 2, 3, 4, 5];
 const searchElement = 5;
 
@@ -15,6 +16,7 @@ console.log(arr.indexOf(searchElement) !== -1); // true
 ```
 
 ```javascript
+// ECMASCript 5
 const arr = [1, 2, 3, 4, 5];
 const searchElement = 5;
 
@@ -26,6 +28,7 @@ console.log(arr.some(item => item === searchElement)); // true
 сравнивать текущий элемент массива с искомым не надо.
 
 ```javascript
+// ECMAScript 7
 const arr = [1, 2, 3, 4, 5];
 const searchElement = 5;
 

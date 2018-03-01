@@ -14,6 +14,7 @@
 определения свойства.
 
 ```javascript
+// ECMAScript 7
 @readonly
 class Person {
   // ...
@@ -25,6 +26,7 @@ class Person {
 ```
 
 ```javascript
+// ECMAScript 7
 class Person {
   // ...
 
@@ -38,6 +40,7 @@ class Person {
 При добавлении метода к прототипу `Person` получится такое определение свойства:
 
 ```javascript
+// ECMAScript 5
 Object.defineProperty(Person.prototype, 'getAge', {
   value: specifiedFunction,
   enumerable: false,
@@ -103,6 +106,7 @@ person.getAge = () => console.log(this.age); // Ошибка! Данный ме�
 Рассмотрим следующий пример:
 
 ```javascript
+// ECMAScript 7
 function internalNetworkOnly(target) {
   target.internalNetworkOnly = true;
 }
@@ -119,6 +123,7 @@ console.log(Permissions.internalNetworkOnly); // true
 в фабричный метод:
 
 ```javascript
+// ECMAScript 7
 const params = {
   internalNetworkOnly: false,
   accessLevel: 0,
