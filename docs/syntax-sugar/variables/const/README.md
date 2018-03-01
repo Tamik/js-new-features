@@ -10,6 +10,7 @@
 То, как мы делали это ранее:
 
 ```javascript
+// ECMAScript 5
 var COMPANY = 'Yandex';
 
 console.log(COMPANY); // Yandex
@@ -20,10 +21,12 @@ console.log(COMPANY); // Yandex
 Теперь всё иначе:
 
 ```javascript
+// ECMAScript 6
 const COMPANY; // Ошибка! Нельзя объявлять const без присваивания значения
 ```
 
 ```javascript
+// ECMAScript 6
 const COMPANY = 'Yandex';
 
 COMPANY = 'Яндекс'; // Ошибка! Нельзя переопределять постоянную переменную
@@ -35,6 +38,7 @@ console.log(COMPANY);
 Подробнее об этом можно почитать в описании переменной типа `let`.
 
 ```javascript
+// ECMAScript 6
 console.log(COMPANY); // Ошибка! Такой переменной не существует
 
 const COMPANY = 'Yandex';
@@ -44,6 +48,7 @@ const COMPANY = 'Yandex';
 что переменная хранит не сам объект, а ссылку на него.
 
 ```javascript
+// ECMAScript 6
 const OBJ = {
   prop: true,
 };

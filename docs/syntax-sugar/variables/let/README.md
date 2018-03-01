@@ -12,12 +12,14 @@
 появляется ошибка.
 
 ```javascript
+// ECMAScript 5
 console.log(a); // undefined
 
 var a = true;
 ```
 
 ```javascript
+// ECMAScript 6
 console.log(a); // Ошибка! Такой переменной не существует
 
 let a = true;
@@ -31,6 +33,7 @@ let a = true;
 В примере ниже переменная `a` объявляется на весь код, и модифицируется в `if`.
 
 ```javascript
+// ECMAScript 5
 var a = true;
 
 if (true) {
@@ -47,6 +50,7 @@ console.log(a); // false
 одна — глобальная, вторая — в блоке `if`.
 
 ```javascript
+// ECMAScript 6
 let a = true;
 
 if (true) {
@@ -64,6 +68,7 @@ console.log(a); // true
 цикла.
 
 ```javascript
+// ECMAScript 5
 for (var i = 0; i < 10; i++) {
   // ...
 }
@@ -74,6 +79,7 @@ console.log(i); // 10
 Иначе говоря, этот фрагмент кода можно записать вот так:
 
 ```javascript
+// ECMAScript 5
 var i; // undefined
 
 for (i = 0; i < 10; i++) {
@@ -90,6 +96,7 @@ console.log(i); // 10
 итерации.
 
 ```javascript
+// ECMAScript 5
 function makeArray() {
   var arr = [];
 
@@ -109,6 +116,7 @@ array[1](); // 10
 ```
 
 ```javascript
+// ECMAScript 6
 function makeArray() {
   const arr = [];
 

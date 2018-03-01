@@ -11,6 +11,7 @@
 `function* ()`, — её называют &laquo;функция-генератор&raquo;.
 
 ```javascript
+// ECMAScript 6
 function* createRequest(url) {
   try {
     let request = yield fetch(url);
@@ -28,6 +29,7 @@ function* createRequest(url) {
 приостанавливается, а значение — возвращается во внешний код:
 
 ```javascript
+// ECMAScript 6
 function* sequence() {
   yield 'one';
   yield 'two';

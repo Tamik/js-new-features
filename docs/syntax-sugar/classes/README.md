@@ -10,11 +10,12 @@
 Во-первых, классы не поднимаются (т.н. &laquo;hoisting&raquo;) — поэтому
 обращаться к классу можно только после его декларации. Во-вторых, тело класса
 должно содержать только методы, но не свойства. Прототип, имеющий свойства,
-обычно считается анти-паттерном (как мои примеры ниже, лол).  
+обычно считается анти-паттерном.  
 Также классы поддерживают геттеры и сеттеры в соответствии с
 [объектными литералами](../object-literals/README.md).
 
 ```javascript
+// ECMAScript 5
 function A(prop) {
   this.prop = prop;
 }
@@ -37,6 +38,7 @@ console.log(a.getProp()); // another example
 ```
 
 ```javascript
+// ECMAScript 6
 class A {
   constructor(prop) {
     this.prop = prop;
@@ -63,6 +65,7 @@ console.log(a.getProp()); // another example
 ---
 
 ```javascript
+// ECMAScript 5
 function A() {
   // ...
 }
@@ -94,6 +97,7 @@ console.log(b.anotherProp); // 2
 использовать метод `Object.create`.
 
 ```javascript
+// ECMAScript 5
 function A() {
   // ...
 }
@@ -121,6 +125,7 @@ console.log(b.anotherProp()); // 2
 ```
 
 ```javascript
+// ECMAScript 6
 class A {
   // ...
 
@@ -148,6 +153,7 @@ console.log(b.anotherProp()); // 2
 через `this`, иначе произойдёт ошибка.
 
 ```javascript
+// ECMAScript 6
 class A {
   // ...
 }

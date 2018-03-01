@@ -7,6 +7,7 @@
 В ECMAScript 5 подобную функциональность приходилось писать вот так:
 
 ```javascript
+// ECMAScript 5
 function greet(name) {
   return 'Hello, ' + name + '!';
 }
@@ -15,6 +16,7 @@ console.log(greet('John')); // Hello, John!
 ```
 
 ```javascript
+// ECMAScript 5
 var protocol = 'https';
 var company = 'yandex';
 var domain = 'ru';
@@ -23,6 +25,7 @@ console.log('Link: ' + protocol + '://' + company + '.' + domain); // Link: http
 ```
 
 ```javascript
+// ECMAScript 5
 var tag = 'div';
 var class = 'bem';
 var children = 'Hello, world!';
@@ -37,6 +40,7 @@ console.log(createElement(tag, class, children)); // <div class="bem">Hello, wor
 В ECMAScript 6, благодаря шаблонным строкам, всё проще:
 
 ```javascript
+// ECMAScript 6
 function greet(name) {
   return `Hello, ${name}!`;
 }
@@ -45,6 +49,7 @@ console.log(greet('John')); // Hello, John!
 ```
 
 ```javascript
+// ECMAScript 6
 const protocol = 'https';
 const company = 'https://yandex.ru';
 const domain = 'ru';
@@ -55,6 +60,7 @@ console.log(`Link: ${protocol}://${company}.${domain}`); // Link: https://yandex
 Также стоит отметить, что шаблонные строки поддерживают многострочность.
 
 ```javascript
+// ECMAScript 6
 const tag = 'div';
 const class = 'i-bem';
 const children = 'Hello, world!';
@@ -74,6 +80,7 @@ console.log(createElement(tag, class, children)); // <div class="i-bem">Hello, w
 Для того, чтобы убедиться, что мы действительно складываем числа, можно использовать `parseInt`.
 
 ```javascript
+// ECMAScript 6
 function add(a, b) {
   return `${a} + ${b} = ${parseInt(a) + parseInt(b)}`;
 }
@@ -86,6 +93,7 @@ console.log(add(1, '2')); // 1 + 2 = 3
 значения вычисленных выражений. В конце функция должна вернуть итоговую строку.
 
 ```javascript
+// ECMAScript 6
 const name = 'Tamik';
 
 console.log(`Hello, ${name}!`); // Hello, Tamik!

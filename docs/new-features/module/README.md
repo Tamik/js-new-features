@@ -17,6 +17,7 @@ CommonJS, так и для пользователей AMD. В связи с эт
 лежит файл, импортирующий другой модуль. Расширение опускается.
 
 ```javascript
+// ECMAScript 6
 import {APP_VERSION} from './path/to/module';
 
 console.log(APP_VERSION); // 1.0
@@ -29,6 +30,7 @@ console.log(APP_VERSION); // 1.0
 части приложения.
 
 ```javascript
+// ECMAScript 6
 const toExport = false;
 
 export const APP_VERSION = 1.0;
@@ -52,6 +54,7 @@ export function generateSequence(length) {
 В таком случае удобно определить это значение как экспортируемое по умолчанию:
 
 ```javascript
+// ECMAScript 6
 export default class { // анонимный класс
   //
 }
@@ -68,6 +71,7 @@ export default class { // анонимный класс
 В ECMAScript 6 вы можете использовать анонимный внутренний модуль:
 
 ```javascript
+// ECMAScript 6
 module {
   // ...
 }
@@ -85,6 +89,7 @@ module {
 например, в конце:
 
 ```javascript
+// ECMAScript 6
 const toExport = false;
 
 const APP_VERSION = 1.0;

@@ -15,6 +15,7 @@
 по умолчанию.
 
 ```javascript
+// ECMAScript 5
 function greet(name) {
   if (!name) {
     return `Hello, guest.`;
@@ -34,6 +35,7 @@ console.log(greet(undefined)); // Hello, guest.
 по умолчанию у данного аргумента. Это позволяет избавиться от проверок внутри функции.
 
 ```javascript
+// ECMAScript 6
 function greet(name = 'guest') {
   return `Hello, ${name}.`;
 }
@@ -61,6 +63,7 @@ ECMAScript 6 предоставляет новый способ писать в�
 остаточных параметров.
 
 ```javascript
+// ECMAScript 5
 var array = [];
 
 function containsAll(arr) {
@@ -89,6 +92,7 @@ function containsAll(arr) {
 реализация этой же функции на ECMAScript 6, с использованием остаточного параметра:
 
 ```javascript
+// ECMAScript 6
 const array = [];
 
 function containsAll(arr, ...values) {
@@ -111,6 +115,7 @@ function containsAll(arr, ...values) {
 просто пустым массивом, он никогда не может быть равным `undefined`.
 
 ```javascript
+// ECMAScript 6
 function sum(...values) {
   return values.reduce((acc, item) => acc + item);
 }

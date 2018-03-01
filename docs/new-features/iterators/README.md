@@ -10,6 +10,7 @@
 Для перебора таких объектов добавлен новый синтаксис цикла: [`for..of`](../for-of/README.md).
 
 ```javascript
+// ECMAScript 6
 const arr = [1, 2, 3];
 
 for (let value of arr) {
@@ -23,6 +24,7 @@ for (let value of arr) {
 Вот как выглядит простой итератор изнутри:
 
 ```javascript
+// ECMAScript 6
 const iterator = {
   [Symbol.iterator]: function() {
     return this;

@@ -5,6 +5,7 @@
 В ECMAScript 6 появился новый синтаксис функций.
 
 ```javascript
+// ECMAScript 5
 var numbers = [-2, -1, 0, 1, 2];
 
 var positiveIntegers = numbers.filter(function(number) {
@@ -15,6 +16,7 @@ console.log(positiveIntegers); // [1, 2]
 ```
 
 ```javascript
+// ECMAScript 6
 const numbers = [-2, -1, 0, 1, 2];
 
 const positiveIntegers = numbers.filter(number => number > 0);
@@ -27,6 +29,7 @@ console.log(positiveIntegers); // [1, 2]
 ни `return`, ни круглых с фигурными скобками и точек с запятой.
 
 ```javascript
+// ECMAScript 5
 function add(a, b) {
   return a + b;
 }
@@ -35,6 +38,7 @@ console.log(add(1, 2)); // 3
 ```
 
 ```javascript
+// ECMAScript 6
 const add = (a, b) => a + b;
 
 console.log(add(1, 2)); // 3
@@ -45,6 +49,7 @@ console.log(add(1, 2)); // 3
 нужно просто добавить скобки вокруг списка аргументов.
 
 ```javascript
+// ECMAScript 5
 var array = [1, 2, 3, 4, 5];
 
 var total = array.reduce(function(acc, item) {
@@ -55,6 +60,7 @@ console.log(total); // 15
 ```
 
 ```javascript
+// ECMAScript 6
 const array = [1, 2, 3, 4, 5];
 
 const total = array.reduce((acc, item) => acc + item, 0);
@@ -101,6 +107,7 @@ fetch(url)
 контекст&raquo;).
 
 ```javascript
+// ECMAScript 5
 var person = {
   name: 'Tamik',
   showName: function() {
@@ -112,6 +119,7 @@ console.log(person.showName()); // Tamik
 ```
 
 ```javascript
+// ECMAScript 6
 const person = {
   name: 'Tamik',
   showName: () => this.name,
@@ -121,6 +129,7 @@ console.log(person.showName()); // undefined
 ```
 
 ```javascript
+// ECMAScript 5
 var person = {
   name: 'Tamik',
   showName: function() {
@@ -134,6 +143,7 @@ person.showName(); // undefined
 ```
 
 ```javascript
+// ECMAScript 6
 const person = {
   name: 'Tamik',
   showName: function() {
@@ -168,6 +178,7 @@ person.showName(); // Tamik
 Работа с массивами и объектами несколько отличается:
 
 ```javascript
+// ECMAScript 5
 function getPerson() {
   return {
     name: 'Tamik',
@@ -185,6 +196,7 @@ console.log(getServices()); // ['Market', 'Maps', 'Music']
 ```
 
 ```javascript
+// ECMAScript 6
 const getPerson = () => ({
   name: 'Tamik',
   age: 19,
@@ -200,12 +212,14 @@ console.log(getServices()); // ['Market', 'Maps', 'Music']
 Стрелочная функция может быть IIFE*.
 
 ```javascript
+// ECMAScript 5
 (function() {
   console.log('IIFE');
 })();
 ```
 
 ```javascript
+// ECMAScript 6
 (() => console.log('IIFE'))();
 ```
 
@@ -213,6 +227,7 @@ console.log(getServices()); // ['Market', 'Maps', 'Music']
 оператор `new`.
 
 ```javascript
+// ECMAScript 6
 const Person = () => console.log('Construct!');
 
 const person = new Person(); // Ошибка! Person не является конструктором

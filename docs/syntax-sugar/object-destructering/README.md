@@ -11,6 +11,7 @@
 массива так:
 
 ```javascript
+// ECMAScript 5
 var array = [{}, {}];
 
 var firstElement = array[0];
@@ -21,6 +22,7 @@ var secondElement = array[1];
 читаемым:
 
 ```javascript
+// ECMAScript 6
 const array = [{}, {}];
 
 const [firstElement, secondElement] = array;
@@ -29,6 +31,7 @@ const [firstElement, secondElement] = array;
 Также можно собрать все последние элементы массива используя [&laquo;остаточный&raquo; параметр](../fn-parameters/README.md):
 
 ```javascript
+// ECMAScript 6
 const [first, ...rest] = [1, 2, 3];
 
 console.log(rest); // [2, 3]
@@ -38,6 +41,7 @@ console.log(rest); // [2, 3]
 такое произойдет, если мы попытаемся обратиться к “лишнему” элементу массива:
 
 ```javascript
+// ECMAScript 6
 const array = [];
 
 const [first, ...rest] = array;
@@ -52,6 +56,7 @@ console.log(rest); // undefined
 мы получим переменную, которой присвоено значение поля.
 
 ```javascript
+// ECMAScript 6
 const person = {
   name: 'Tamik',
   age: 19,
@@ -67,6 +72,7 @@ console.log(age); // 19
 Это очень удобно, например, если надо развести совпадающие значения внутренних полей:
 
 ```javascript
+// ECMAScript 6
 const person = {
   firstName: {
     isFirst: true,
@@ -90,6 +96,7 @@ console.log(secondName); // Lokiaev
 конструкцией:
 
 ```javascript
+// ECMAScript 6
 const person = {
   name: 'Tamik',
   age: 19,
@@ -105,6 +112,7 @@ console.log(age); // 19
 Деструктурирование можно вкладывать и совмещать:
 
 ```javascript
+// ECMAScript 6
 const deepObj = {
   props: [
     'prop_id',
@@ -125,6 +133,7 @@ console.log(id); // 1
 возвращено значение `undefined`.
 
 ```javascript
+// ECMAScript 6
 const obj = {};
 
 const {prop} = obj;
@@ -136,6 +145,7 @@ console.log(prop); // undefined
 нужно деструктурировать, может быть неопределено:
 
 ```javascript
+// ECMAScript 6
 const array = [];
 
 const [missing = 'Empty cell'] = array;
@@ -153,6 +163,7 @@ console.log(missing); // Empty cell
 аргументов по-прежнему не важен:
 
 ```javascript
+// ECMAScript 6
 function makeRequest({url, params}) {
   // ...
 }
@@ -161,6 +172,7 @@ function makeRequest({url, params}) {
 При этом есть возможность задать любому свойству значение по умолчанию:
 
 ```javascript
+// ECMAScript 6
 function makeRequest({url, params = {}}) {
   // ...
 }
@@ -173,6 +185,7 @@ ECMAScript 6 также определяет протокол для работ�
 удобнее работать как с ключом, так и со значением:
 
 ```javascript
+// ECMAScript 6
 const map = new Map();
 
 map.set(1, true);
@@ -188,6 +201,7 @@ for (let [key, value] of map) {
 Перебор только ключей:
 
 ```javascript
+// ECMAScript 6
 const map = new Map();
 
 for (let [key] of map) {
@@ -198,6 +212,7 @@ for (let [key] of map) {
 Перебор только значений:
 
 ```javascript
+// ECMAScript 6
 const map = new Map();
 
 for (let [, value] of map) {
