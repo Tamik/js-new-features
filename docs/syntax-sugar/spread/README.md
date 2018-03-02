@@ -2,7 +2,7 @@
 
 #### [Оглавление](../../README.md)
 
-Оператор `Spread` (так же известный как &laquo;оператор разворота&raquo;) позволяет разворачивать
+Оператор `Spread` (также известный как &laquo;оператор разворота&raquo;) позволяет разворачивать
 элементы массива для передачи элементов в аргументы функции или в другой массив.
 
 Например, нужно собрать один массив из двух разных. В современном JavaScript это возможно
@@ -38,7 +38,7 @@ var anotherObj = {
   four: false,
 };
 
-console.log({obj, anotherObj}); // {obj: {one: true, two: true}, anotherObj: {three: false, four: false}}
+console.log({obj: obj, anotherObj: anotherObj}); // {obj: {one: true, two: true}, anotherObj: {three: false, four: false}}
 ```
 
 ```javascript
