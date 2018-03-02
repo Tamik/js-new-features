@@ -16,7 +16,7 @@ console.log(arr.indexOf(searchElement) !== -1); // true
 ```
 
 ```javascript
-// ECMASCript 5
+// ECMAScript 5
 const arr = [1, 2, 3, 4, 5];
 const searchElement = 5;
 

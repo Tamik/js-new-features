@@ -67,10 +67,27 @@ const obj = {
 obj.fn(false); // false
 ```
 
-Помимо прочего, появились геттеры и сеттеры:
+Также появилась возможность использовать вычисляемые свойства:
 
 ```javascript
 // ECMAScript 6
+const appConst = 'string';
+
+const obj = {
+  [appConst]: v => ({v}),
+};
+
+obj[`prefix_${appConst}`] = false;
+
+console.log(obj.string('value')); // {v: 'value'}
+console.log(obj.prefix_string); // false
+```
+
+Помимо прочего, ещё со стандарта ECMAScript 5 существуют геттеры и сеттеры,
+однако о их существовании знает не каждый:
+
+```javascript
+// ECMAScript 5
 const obj = {
   __id: 1,
   get id() {
@@ -88,20 +105,4 @@ obj.id = 5;
 console.log(obj.id); // 5
 
 console.log(obj.__id); // 5
-```
-
-Также появилась возможность использовать вычисляемые свойства:
-
-```javascript
-// ECMAScript 6
-const appConst = 'string';
-
-const obj = {
-  [appConst]: v => ({v}),
-};
-
-obj[`prefix_${appConst}`] = false;
-
-console.log(obj.string('value')); // {v: 'value'}
-console.log(obj.prefix_string); // false
 ```

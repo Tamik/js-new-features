@@ -27,14 +27,14 @@ console.log('Link: ' + protocol + '://' + company + '.' + domain); // Link: http
 ```javascript
 // ECMAScript 5
 var tag = 'div';
-var class = 'bem';
+var className = 'bem';
 var children = 'Hello, world!';
 
 function createElement(tagName, className, children) {
   return '<' + tagName + ' class="' + className + '">' + children + '</' + tagName + '>';
 }
 
-console.log(createElement(tag, class, children)); // <div class="bem">Hello, world!</div>
+console.log(createElement(tag, className, children)); // <div class="bem">Hello, world!</div>
 ```
 
 В ECMAScript 6, благодаря шаблонным строкам, всё проще:
@@ -51,7 +51,7 @@ console.log(greet('John')); // Hello, John!
 ```javascript
 // ECMAScript 6
 const protocol = 'https';
-const company = 'https://yandex.ru';
+const company = 'yandex';
 const domain = 'ru';
 
 console.log(`Link: ${protocol}://${company}.${domain}`); // Link: https://yandex.ru
@@ -62,7 +62,7 @@ console.log(`Link: ${protocol}://${company}.${domain}`); // Link: https://yandex
 ```javascript
 // ECMAScript 6
 const tag = 'div';
-const class = 'i-bem';
+const className = 'i-bem';
 const children = 'Hello, world!';
 
 function createElement(tagName, className, children) {
@@ -73,7 +73,7 @@ function createElement(tagName, className, children) {
   `;
 }
 
-console.log(createElement(tag, class, children)); // <div class="i-bem">Hello, world!</div>
+console.log(createElement(tag, className, children)); // <div class="i-bem">Hello, world!</div>
 ```
 
 В выражениях можно использовать различные операции (сложение, вычитание, и т.д.) и вызовы функций.  
