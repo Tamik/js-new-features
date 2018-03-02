@@ -209,7 +209,7 @@ console.log(getPerson()); // { name: 'Tamik', age: 19 }
 console.log(getServices()); // ['Market', 'Maps', 'Music']
 ```
 
-Стрелочная функция может быть IIFE*.
+Стрелочная функция может быть IIFE<sup>1</sup>.
 
 ```javascript
 // ECMAScript 5
@@ -240,5 +240,5 @@ const person = new Person(); // Ошибка! Person не является ко�
 
 ---
 
-*IIFE (Immediately Invoked Function Expression) — функция, которая выполняется
+IIFE<sup>1</sup> (Immediately Invoked Function Expression) — функция, которая выполняется
 сразу же после того как была определена.
