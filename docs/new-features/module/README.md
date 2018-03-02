@@ -4,7 +4,7 @@
 
 Целью модулей ECMAScript 6 было создание формата, удобного как для пользователей
 CommonJS, так и для пользователей AMD. В связи с этим они имеют такой же компактный
-синтаксис, как и модули CommonJS. С другой стороны, они не такие динамичные.
+синтаксис, как и модули CommonJS. Но с другой стороны, они не такие динамичные.
 
 Это даёт два основных преимущества:
 - На этапе компиляции можно обнаружить ошибки, если импортировано что-то, что не
@@ -21,6 +21,27 @@ CommonJS, так и для пользователей AMD. В связи с эт
 import {APP_VERSION} from './path/to/module';
 
 console.log(APP_VERSION); // 1.0
+```
+
+Также при импорте можно заменить название переменной на иное:
+
+```javascript
+// ECMAScript 6
+import {APP_VERSION as version} from './path/to/module';
+
+console.log(version); // 1.0
+```
+
+При надобности импортировать все сущности из одного модуля, можно воспользоваться
+следующей конструкцией:
+
+```javascript
+// ECMAScript 6
+import * as module from './path/to/module';
+
+console.log(module.APP_VERSION); // 1.0
+
+console.log(module.generateSequence(5)); // [0, 1, 2, 3, 4]
 ```
 
 ### Экспорт
@@ -46,7 +67,7 @@ export function generateSequence(length) {
 }
 ```
 
-Модуль выше экспортирует константу `APP_VERSION` и [функцию-генератор]() `generateSequence`.
+Модуль выше экспортирует константу `APP_VERSION` и [функцию-генератор](../generators/README.md) `generateSequence`.
 
 ### Экспорт по умолчанию
 
@@ -56,7 +77,7 @@ export function generateSequence(length) {
 ```javascript
 // ECMAScript 6
 export default class { // анонимный класс
-  //
+  // ...
 }
 ```
 
