@@ -1,6 +1,6 @@
 # Новые возможности JavaScript — Новая функциональность
 
-#### [Оглавление](../../CONTENTS.md)
+#### [Оглавление](../README.md)
 
 - Цикл `for..of`
   - [&laquo;ES6: Цикл for .. of&raquo;](http://jsraccoon.ru/es6-for-of-loop)
