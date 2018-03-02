@@ -1,10 +1,10 @@
 # Новые возможности JavaScript — Синтаксический сахар
 
-#### [Оглавление](../../CONTENTS.md)
+#### [Оглавление](../README.md)
 
 - [Новые типы переменных](./variables/README.md)
-  - [let](./variables/let/README.md)
-  - [const](./variables/const/README.md)
+  - [`let`](./variables/let/README.md)
+  - [`const`](./variables/const/README.md)
 - [Классы](./classes/README.md)
 - [Стрелочные функции и их особенности](./arrow-functions/README.md)
 - [Параметры функции](./fn-parameters/README.md)

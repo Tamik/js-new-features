@@ -1,6 +1,6 @@
 # Новые возможности JavaScript — Интернационализация
 
-#### [Оглавление](../../../CONTENTS.md)
+#### [Оглавление](../../README.md)
 
 Подробнее на [learn.javascript.ru](https://learn.javascript.ru/intl).
 
