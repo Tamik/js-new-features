@@ -28,13 +28,15 @@ A.prototype.getProp = function() {
   return this.prop;
 }
 
-var a = new A('example');
+var a = new A('Example');
 
-console.log(a.getProp()); // example
+console.log(a.getProp());
+// Ожидаемый результат: "Example"
 
-a.setProp('another example');
+a.setProp('Another example');
 
-console.log(a.getProp()); // another example
+console.log(a.getProp());
+// Ожидаемый результат: "Another example"
 ```
 
 ```javascript
@@ -53,13 +55,15 @@ class A {
   }
 }
 
-const a = new A('example');
+const a = new A('Example');
 
-console.log(a.getProp()); // example
+console.log(a.getProp());
+// Ожидаемый результат: "Example"
 
-a.setProp('another example');
+a.setProp('Another Example');
 
-console.log(a.getProp()); // another example
+console.log(a.getProp());
+// Ожидаемый результат: "Another example"
 ```
 
 ---
@@ -74,7 +78,7 @@ function B() {
   // ...
 }
 
-A.prototype.prop = function () {
+A.prototype.prop = function() {
   return 1;
 };
 
@@ -87,9 +91,11 @@ B.prototype.__proto__ = A.prototype;
 
 var b = new B();
 
-console.log(b.prop); // 1
+console.log(b.prop());
+// Ожидаемый результат: 1
 
-console.log(b.anotherProp); // 2
+console.log(b.anotherProp());
+// Ожидаемый результат: 2
 ```
 
 Однако стоит отметить, что доступ к ссылке `__proto__` не доступен в Internet Explorer до 10 версии,
@@ -119,9 +125,11 @@ B.prototype.anotherProp = function () {
 
 var b = new B();
 
-console.log(b.prop()); // 1
+console.log(b.prop());
+// Ожидаемый результат: 1
 
-console.log(b.anotherProp()); // 2
+console.log(b.anotherProp());
+// Ожидаемый результат: 2
 ```
 
 ```javascript
@@ -144,9 +152,11 @@ class B extends A {
 
 const b = new B();
 
-console.log(b.prop()); // 1
+console.log(b.prop());
+// Ожидаемый результат: 1
 
-console.log(b.anotherProp()); // 2
+console.log(b.anotherProp());
+// Ожидаемый результат: 2
 ```
 
 В классе-наследнике нужно вызвать `super()` до того, как обращаться к свойствам
@@ -168,4 +178,4 @@ class B extends A {
 const b = new B(); // Ошибка!
 ```
 
-Также желательно к прочтению: [&laquo;Новые #приватные поля классов в JavaScript&raquo;](https://medium.com/devschacht/javascripts-new-private-class-fields-c60daffe361b)
+Также рекомендую прочитать статью [&laquo;Новые #приватные поля классов в JavaScript&raquo;](https://medium.com/devschacht/javascripts-new-private-class-fields-c60daffe361b) на Medium.

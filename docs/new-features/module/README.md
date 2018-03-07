@@ -20,7 +20,8 @@ CommonJS, так и для пользователей AMD. В связи с эт
 // ECMAScript 6
 import {APP_VERSION} from './path/to/module';
 
-console.log(APP_VERSION); // 1.0
+console.log(APP_VERSION);
+// Ожидаемый результат: 1.0
 ```
 
 Также при импорте можно заменить название переменной на иное:
@@ -29,7 +30,8 @@ console.log(APP_VERSION); // 1.0
 // ECMAScript 6
 import {APP_VERSION as version} from './path/to/module';
 
-console.log(version); // 1.0
+console.log(version);
+// Ожидаемый результат: 1.0
 ```
 
 При надобности импортировать все сущности из одного модуля, можно воспользоваться
@@ -39,9 +41,11 @@ console.log(version); // 1.0
 // ECMAScript 6
 import * as module from './path/to/module';
 
-console.log(module.APP_VERSION); // 1.0
+console.log(module.APP_VERSION);
+// Ожидаемый результат: 1.0
 
-console.log(module.generateSequence(5)); // [0, 1, 2, 3, 4]
+console.log(module.generateSequence(5));
+// Ожидаемый результат: [0, 1, 2, 3, 4]
 ```
 
 ### Экспорт

@@ -14,8 +14,9 @@
 const arr = [1, 2, 3];
 
 for (let value of arr) {
-  console.log(value); // 1 -> 2 -> 3
+  console.log(value);
 }
+// Ожидаемый результат: 1 -> 2 -> 3
 ```
 
 Итераторы – расширяющая понятие &laquo;массив&raquo; концепция, которая пронизывает
@@ -51,3 +52,5 @@ const iterator = {
 и многое другое.
 
 В отличие от массивов, перебираемые объекты могут не иметь &laquo;длины&raquo; `length`.
+
+Более подробно итераторы можно изучить на [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_generators).

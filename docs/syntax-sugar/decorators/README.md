@@ -116,7 +116,8 @@ class Permissions {
   // ...
 }
 
-console.log(Permissions.internalNetworkOnly); // true
+console.log(Permissions.internalNetworkOnly);
+// Ожидаемый результат: true
 ```
 
 Также можно дать возможность принимать декоратору параметры, тем самым превратив егоё
@@ -141,7 +142,8 @@ class Permissions {
   // ...
 }
 
-console.log(Permissions.internalNetworkOnly); // true
+console.log(Permissions.internalNetworkOnly);
+// Ожидаемый результат: true
 ```
 
 ---

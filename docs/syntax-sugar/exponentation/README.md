@@ -11,12 +11,7 @@
 Math.pow(x, y);
 ```
 
-вернёт тот же результат, что и
-
-```javascript
-// ECMAScript 7
-x ** y
-```
+вернёт тот же результат, что и выражение `x ** y`
 
 Примеры использования:
 
@@ -24,7 +19,8 @@ x ** y
 // ECMAScript 7
 const squared = 3 ** 2;
 
-console.log(squared); // 9
+console.log(squared);
+// Ожидаемый результат: 9
 ```
 
 ```javascript
@@ -33,5 +29,6 @@ let squared = 3;
 
 squared **= 2;
 
-console.log(squared); // 9
+console.log(squared);
+// Ожидаемый результат: 9
 ```

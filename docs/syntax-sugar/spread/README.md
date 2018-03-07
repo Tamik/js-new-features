@@ -13,7 +13,8 @@
 var array = [1, 2, 3];
 var anotherArray = [4, 5, 6];
 
-console.log([array, anotherArray]); // [[1, 2, 3], [4, 5, 6]]
+console.log([array, anotherArray]);
+// Ожидаемый результат: [[1, 2, 3], [4, 5, 6]]
 ```
 
 ```javascript
@@ -21,7 +22,8 @@ console.log([array, anotherArray]); // [[1, 2, 3], [4, 5, 6]]
 const array = [1, 2, 3];
 const array = [4, 5, 6];
 
-console.log([...array, ...anotherArray]); // [1, 2, 3, 4, 5, 6]
+console.log([...array, ...anotherArray]);
+// Ожидаемый результат: [1, 2, 3, 4, 5, 6]
 ```
 
 Это так же работает и с объектами:
@@ -38,7 +40,8 @@ var anotherObj = {
   four: false,
 };
 
-console.log({obj: obj, anotherObj: anotherObj}); // {obj: {one: true, two: true}, anotherObj: {three: false, four: false}}
+console.log({obj: obj, anotherObj: anotherObj});
+// Ожидаемый результат: {obj: {one: true, two: true}, anotherObj: {three: false, four: false}}
 ```
 
 ```javascript
@@ -53,10 +56,11 @@ const anotherObj = {
   four: false,
 };
 
-console.log({...obj, ...anotherObj}); // {one: true, two: true, three: false, four: false}
+console.log({...obj, ...anotherObj});
+// Ожидаемый результат: {one: true, two: true, three: false, four: false}
 ```
 
-`Spread`-оператор так же удобен для передачи массивов в качестве аргументов функции.
+`Spread`-оператор также удобен для передачи массивов в качестве аргументов функции.
 
 ```javascript
 // ECMAScript 5
@@ -66,7 +70,8 @@ function add(a, b, c) {
   return a + b + c;
 }
 
-console.log(add(numbers)); // 1,2,3undefinedundefined
+console.log(add(numbers));
+// Ожидаемый результат: 1,2,3undefinedundefined
 ```
 
 ```javascript
@@ -75,5 +80,6 @@ const numbers = [1, 2, 3];
 
 const add = (a, b, c) => (a + b + c);
 
-console.log(add(...numbers)); // 6
+console.log(add(...numbers));
+// Ожидаемый результат: 6
 ```
