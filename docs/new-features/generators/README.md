@@ -40,15 +40,18 @@ let generator = sequence();
 
 let step = generator.next();
 
-console.log(step); // {value: 'one', done: false}
+console.log(step);
+// Ожидаемый результат: {value: "one", done: false}
 
 let secondStep = generator.next();
 
-console.log(secondStep); // {value: 'two', done: false}
+console.log(secondStep);
+// Ожидаемый результат: {value: "two", done: false}
 
 let thirdStep = generator.next();
 
-console.log(thirdStep); // {value: 'three', done: true}
+console.log(thirdStep);
+// Ожидаемый результат: {value: "three", done: true}
 ```
 
 Функции-генераторы имеют 2 отличия от обычных функций:

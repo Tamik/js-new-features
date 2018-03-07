@@ -12,7 +12,8 @@ function greet(name) {
   return 'Hello, ' + name + '!';
 }
 
-console.log(greet('John')); // Hello, John!
+console.log(greet('John'));
+// Ожидаемый результат: "Hello, John!"
 ```
 
 ```javascript
@@ -21,7 +22,8 @@ var protocol = 'https';
 var company = 'yandex';
 var domain = 'ru';
 
-console.log('Link: ' + protocol + '://' + company + '.' + domain); // Link: https://yandex.ru
+console.log('Link: ' + protocol + '://' + company + '.' + domain);
+// Ожидаемый результат: "Link: https://yandex.ru"
 ```
 
 ```javascript
@@ -34,7 +36,8 @@ function createElement(tagName, className, children) {
   return '<' + tagName + ' class="' + className + '">' + children + '</' + tagName + '>';
 }
 
-console.log(createElement(tag, className, children)); // <div class="bem">Hello, world!</div>
+console.log(createElement(tag, className, children));
+// Ожидаемый результат: "<div class="bem">Hello, world!</div>"
 ```
 
 В ECMAScript 6, благодаря шаблонным строкам, всё проще:
@@ -45,7 +48,8 @@ function greet(name) {
   return `Hello, ${name}!`;
 }
 
-console.log(greet('John')); // Hello, John!
+console.log(greet('John'));
+// Ожидаемый результат: "Hello, John!"
 ```
 
 ```javascript
@@ -54,7 +58,8 @@ const protocol = 'https';
 const company = 'yandex';
 const domain = 'ru';
 
-console.log(`Link: ${protocol}://${company}.${domain}`); // Link: https://yandex.ru
+console.log(`Link: ${protocol}://${company}.${domain}`);
+// Ожидаемый результат: "Link: https://yandex.ru"
 ```
 
 Также стоит отметить, что шаблонные строки поддерживают многострочность.
@@ -73,7 +78,8 @@ function createElement(tagName, className, children) {
   `;
 }
 
-console.log(createElement(tag, className, children)); // <div class="i-bem">Hello, world!</div>
+console.log(createElement(tag, className, children));
+// Ожидаемый результат: "<div class="i-bem">Hello, world!</div>"
 ```
 
 В выражениях можно использовать различные операции (сложение, вычитание, и т.д.) и вызовы функций.  
@@ -85,7 +91,8 @@ function add(a, b) {
   return `${a} + ${b} = ${parseInt(a) + parseInt(b)}`;
 }
 
-console.log(add(1, '2')); // 1 + 2 = 3
+console.log(add(1, '2'));
+// Ожидаемый результат: "1 + 2 = 3"
 ```
 
 Шаблонные строки можно тегировать. Это позволяет изменять вывод шаблонов при помощи функции.
@@ -96,11 +103,13 @@ console.log(add(1, '2')); // 1 + 2 = 3
 // ECMAScript 6
 const name = 'Tamik';
 
-console.log(`Hello, ${name}!`); // Hello, Tamik!
+console.log(`Hello, ${name}!`);
+// Ожидаемый результат: "Hello, Tamik!"
 
 function upperName(literals, ...values) {
   return literals[0] + values[0].toUpperCase();
 }
 
-console.log(upperName`Hello, ${name}!`); // Hello, TAMIK!
+console.log(upperName`Hello, ${name}!`);
+// Ожидаемый результат: "Hello, TAMIK!"
 ```

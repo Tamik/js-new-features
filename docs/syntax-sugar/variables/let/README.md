@@ -39,10 +39,12 @@ var a = true;
 if (true) {
   var a = false;
 
-  console.log(a); // false
+  console.log(a);
+  // Ожидаемый результат: false
 }
 
-console.log(a); // false
+console.log(a);
+// Ожидаемый результат: false
 ```
 
 С `let` будет иначе, так как областью видимости переменной типа `let` является блок с
@@ -56,10 +58,12 @@ let a = true;
 if (true) {
   let a = false;
 
-  console.log(a); // false
+  console.log(a);
+  // Ожидаемый результат: false
 }
 
-console.log(a); // true
+console.log(a);
+// Ожидаемый результат: true
 ```
 
 ### 3. Использование в циклах
@@ -73,7 +77,8 @@ for (var i = 0; i < 10; i++) {
   // ...
 }
 
-console.log(i); // 10
+console.log(i);
+// Ожидаемый результат: 10
 ```
 
 Иначе говоря, этот фрагмент кода можно записать вот так:
@@ -86,7 +91,8 @@ for (i = 0; i < 10; i++) {
   // ...
 }
 
-console.log(i); // 10
+console.log(i);
+// Ожидаемый результат: 10
 ```
 
 Переменная типа `let` работает иначе.  
@@ -111,8 +117,10 @@ function makeArray() {
 
 var array = makeArray();
 
-array[0](); // 10
-array[1](); // 10
+array[0]();
+// Ожидаемый результат: 10
+array[1]();
+// Ожидаемый результат: 10
 ```
 
 ```javascript
@@ -129,8 +137,10 @@ function makeArray() {
 
 const array = makeArray();
 
-array[0](); // 0
-array[1](); // 1
+array[0]();
+// Ожидаемый результат: 0
+array[1]();
+// Ожидаемый результат: 1
 ```
 
 Переменные типа `let` могут сделать работу с переменными более понятной и интуитивной,

@@ -34,7 +34,8 @@ const [firstElement, secondElement] = array;
 // ECMAScript 6
 const [first, ...rest] = [1, 2, 3];
 
-console.log(rest); // [2, 3]
+console.log(rest);
+// Ожидаемый результат: [2, 3]
 ```
 
 Присваивание несуществующего элемента обрабатывается корректно - как `undefined`. Например,
@@ -46,9 +47,11 @@ const array = [];
 
 const [first, ...rest] = array;
 
-console.log(first); // undefined
+console.log(first);
+// Ожидаемый результат: undefined
 
-console.log(rest); // undefined
+console.log(rest);
+// Ожидаемый результат: undefined
 ```
 
 Деструктурирование позволяет сопоставлять переменным различные поля объектов.
@@ -64,9 +67,11 @@ const person = {
 
 const {name: firstName, age: age} = person;
 
-console.log(firstName); // Tamik
+console.log(firstName);
+// Ожидаемый результат: "Tamik"
 
-console.log(age); // 19
+console.log(age);
+// Ожидаемый результат: 19
 ```
 
 Это очень удобно, например, если надо развести совпадающие значения внутренних полей:
@@ -80,16 +85,21 @@ const person = {
   },
   secondName: {
     isFirst: false,
-    text: 'Lokiaev',
+    text: 'Lokyaev',
   },
   age: 19,
 };
 
-const {firstName: {text: firstName}, secondName: {text: secondName}} = person;
+const {firstName: {text: firstName}, secondName: {text: secondName}, age} = person;
 
-console.log(firstName); // Tamik
+console.log(firstName);
+// Ожидаемый результат: "Tamik"
 
-console.log(secondName); // Lokiaev
+console.log(secondName);
+// Ожидаемый результат: "Lokyaev"
+
+console.log(age);
+// Ожидаемый результат: 19
 ```
 
 При совпадении имени свойства и переменной можно воспользоваться следующей синтаксической
@@ -104,9 +114,11 @@ const person = {
 
 const = {name, age} = person;
 
-console.log(name); // Tamik
+console.log(name);
+// Ожидаемый результат: "Tamik"
 
-console.log(age); // 19
+console.log(age);
+// Ожидаемый результат: 19
 ```
 
 Деструктурирование можно вкладывать и совмещать:
@@ -124,9 +136,11 @@ const deepObj = {
 
 const {props: [propId, {id}]} = deepObj;
 
-console.log(propId); // prop_id
+console.log(propId);
+// Ожидаемый результат: "prop_id"
 
-console.log(id); // 1
+console.log(id);
+// Ожидаемый результат: 1
 ```
 
 Если при деструктурировании обратиться к свойствам, которые не определены, будет
@@ -138,7 +152,8 @@ const obj = {};
 
 const {prop} = obj;
 
-console.log(prop); // undefined
+console.log(prop);
+// Ожидаемый результат: undefined
 ```
 
 Также возможно указать значения по умолчанию на случай, если свойство, которое
@@ -150,7 +165,8 @@ const array = [];
 
 const [missing = 'Empty cell'] = array;
 
-console.log(missing); // Empty cell
+console.log(missing);
+// Ожидаемый результат: "Empty cell"
 ```
 
 ### Применение
@@ -194,8 +210,7 @@ map.set(2, false);
 for (let [key, value] of map) {
   console.log(key, value);
 }
-// 1, true
-// 2, false
+// Ожидаемый результат: 1, true -> 2, false
 ```
 
 Перебор только ключей:

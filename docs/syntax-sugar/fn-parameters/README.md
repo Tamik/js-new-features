@@ -24,11 +24,14 @@ function greet(name) {
   return `Hello, ${name}.`;
 }
 
-console.log(greet()); // Hello, guest.
+console.log(greet());
+// Ожидаемый результат: "Hello, guest."
 
-console.log(greet('John')); // Hello, John.
+console.log(greet('John'));
+// Ожидаемый результат: "Hello, John."
 
-console.log(greet(undefined)); // Hello, guest.
+console.log(greet(undefined));
+// Ожидаемый результат: "Hello, guest."
 ```
 
 Если в качестве одного из аргументов не было передано значение, то можно задать значение
@@ -40,11 +43,14 @@ function greet(name = 'guest') {
   return `Hello, ${name}.`;
 }
 
-console.log(greet()); // Hello, guest.
+console.log(greet());
+// Ожидаемый результат: "Hello, guest."
 
-console.log(greet('John')); // Hello, John.
+console.log(greet('John'));
+// Ожидаемый результат: "Hello, John."
 
-console.log(greet(undefined)); // Hello, guest.
+console.log(greet(undefined));
+// Ожидаемый результат: "Hello, guest."
 ```
 
 Существует несколько особенностей, связанных с параметрами по умолчанию:
@@ -117,10 +123,11 @@ function containsAll(arr, ...values) {
 ```javascript
 // ECMAScript 6
 function sum(...values) {
-  return values.reduce((acc, item) => acc + item);
+  return values.reduce((acc, item) => acc + item, 0);
 }
 
-console.log(sum(1, 2, 3, 4, 5)); // 15
+console.log(sum(1, 2, 3, 4, 5));
+// Ожидаемый результат: 15
 ```
 
 ---

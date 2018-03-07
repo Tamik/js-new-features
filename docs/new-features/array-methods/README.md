@@ -11,18 +11,20 @@
 
 ```javascript
 // ECMAScript 5
-const array = [1, 2, 3, 4, 5];
-const searchElement = 5;
+var array = [1, 2, 3, 4, 5];
+var searchElement = 5;
 
-console.log(array.indexOf(searchElement) !== -1); // true
+console.log(array.indexOf(searchElement) !== -1);
+// Ожидаемый результат: true
 ```
 
 ```javascript
 // ECMAScript 5
-const array = [1, 2, 3, 4, 5];
-const searchElement = 5;
+var array = [1, 2, 3, 4, 5];
+var searchElement = 5;
 
-console.log(array.some(item => item === searchElement)); // true
+console.log(array.some(item => item === searchElement));
+// Ожидаемый результат: true
 ```
 
 Однако в ECMAScript 7 появился метод `Array.includes`. В него достаточно передать искомый
@@ -35,7 +37,8 @@ console.log(array.some(item => item === searchElement)); // true
 const array = [1, 2, 3, 4, 5];
 const searchElement = 5;
 
-console.log(array.includes(searchElement)); // true
+console.log(array.includes(searchElement));
+// Ожидаемый результат: true
 ```
 
 ### `Array.find`
@@ -47,7 +50,8 @@ console.log(array.includes(searchElement)); // true
 // ECMAScript 6
 const array = [0, 5, 10];
 
-console.log(array.find(item => item > 1)); // 5
+console.log(array.find(item => item > 1));
+// Ожидаемый результат: 5
 ```
 
 ### `Array.findIndex`
@@ -60,7 +64,8 @@ console.log(array.find(item => item > 1)); // 5
 // ECMAScript 6
 const array = [0, 5, 10];
 
-console.log(array.findIndex(item => item > 1)); // 1
+console.log(array.findIndex(item => item > 1));
+// Ожидаемый результат: 1
 ```
 
 ### `Array.fill`
@@ -71,12 +76,14 @@ console.log(array.findIndex(item => item > 1)); // 1
 // ECMAScript 6
 const array = [1, 2, 3];
 
-console.log(array.fill(5)); // [5, 5, 5]
+console.log(array.fill(5));
+// Ожидаемый результат: [5, 5, 5]
 ```
 
 ```javascript
 // ECMAScript 6
-console.log(new Array(3).fill(5)); // [5, 5, 5]
+console.log(new Array(3).fill(5));
+// Ожидаемый результат: [5, 5, 5]
 ```
 
 При этом `fill` принимает 2 дополнительных аргумента: индекс позиций начала и конца
@@ -86,7 +93,8 @@ console.log(new Array(3).fill(5)); // [5, 5, 5]
 // ECMAScript 6
 const array = [0, 2, 4, 6, 8];
 
-console.log(array.fill(10, 1, 3)); // [0, 10, 10, 10, 8]
+console.log(array.fill(10, 1, 3));
+// Ожидаемый результат: [0, 10, 10, 10, 8]
 ```
 
 ### `Array#from`
@@ -107,10 +115,11 @@ Array.from(list).forEach(item => console.log(item));
 
 ```javascript
 function Fn() {
-  return Array.from(aguments);
+  return Array.from(arguments);
 }
 
-console.log(Fn('param1', 'param2', 3, 4, 5)); // ['param1', 'param2', 3, 4, 5]
+console.log(Fn('one', 'two', 3, 4, 5));
+// Ожидаемый результат: ["one", "two", 3, 4, 5]
 ```
 
 Вот так, например, можно создать массив со значениями элементов, соответствующих
@@ -120,7 +129,8 @@ console.log(Fn('param1', 'param2', 3, 4, 5)); // ['param1', 'param2', 3, 4, 5]
 // ECMAScript 6
 const array = Array.from(new Array(5), (value, index) => index);
 
-console.log(array); // [0, 1, 2, 3, 4]
+console.log(array);
+// Ожидаемый результат: [0, 1, 2, 3, 4]
 ```
 
 ### `Array.of`
@@ -132,13 +142,14 @@ console.log(array); // [0, 1, 2, 3, 4]
 // ECMAScript 6
 const array = [1, 2, 3, 4, 5];
 
-console.log(Array.of(1)); // [1]
-
-console.log(Array.of(1, 2, 3)); // [1, 2, 3]
-
-console.log(Array.of(array)); // [[1, 2, 3, 4, 5]]
-
-console.log(Array.of(...array)); // [1, 2, 3, 4, 5]
+console.log(Array.of(1));
+// Ожидаемый результат: [1]
+console.log(Array.of(1, 2, 3));
+// Ожидаемый результат: [1, 2, 3]
+console.log(Array.of(array));
+// Ожидаемый результат: [[1, 2, 3, 4, 5]]
+console.log(Array.of(...array));
+// Ожидаемый результат: [1, 2, 3, 4, 5]
 ```
 
 ---
@@ -150,15 +161,16 @@ console.log(Array.of(...array)); // [1, 2, 3, 4, 5]
 - `Array.values`
 
 Результатом каждого из вышеупомянутых методов является последовательность значений,
-но они не возвращаются как массив; они раскрываются один за другим через итератор.
+но они не возвращаются как массив; они раскрываются один за другим через [итератор](../iterators/README.md).
 
 ```javascript
 // ECMAScript 6
 const array = ['a', 'b', 'c'];
 
-console.log(array.entries()); // [[0, 'a'], [1, 'b'], [2, 'c']]
-
-console.log(array.keys()); // [0, 1, 2]
-
-console.log(array.values()); // ['a', 'b', 'c']
+console.log(array.entries());
+// Ожидаемый результат: [[0, "a"], [1, "b"], [2, "c"]]
+console.log(array.keys());
+// Ожидаемый результат: [0, 1, 2]
+console.log(array.values());
+// Ожидаемый результат: ["a", "b", "c"]
 ```

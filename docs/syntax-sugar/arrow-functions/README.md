@@ -12,7 +12,8 @@ var positiveIntegers = numbers.filter(function(number) {
   return number > 0;
 });
 
-console.log(positiveIntegers); // [1, 2]
+console.log(positiveIntegers);
+// Ожидаемый результат: [1, 2]
 ```
 
 ```javascript
@@ -21,7 +22,8 @@ const numbers = [-2, -1, 0, 1, 2];
 
 const positiveIntegers = numbers.filter(number => number > 0);
 
-console.log(positiveIntegers); // [1, 2]
+console.log(positiveIntegers);
+// Ожидаемый результат: [1, 2]
 ```
 
 Если вам нужна простая функция с одним аргументом, то синтаксис новых, стрелочных
@@ -34,14 +36,16 @@ function add(a, b) {
   return a + b;
 }
 
-console.log(add(1, 2)); // 3
+console.log(add(1, 2));
+// Ожидаемый результат: 3
 ```
 
 ```javascript
 // ECMAScript 6
 const add = (a, b) => a + b;
 
-console.log(add(1, 2)); // 3
+console.log(add(1, 2));
+// Ожидаемый результат: 3
 ```
 
 Чтобы создать функцию с несколькими аргументами (или без аргументов, или с остаточными
@@ -56,7 +60,8 @@ var total = array.reduce(function(acc, item) {
   return acc + item;
 }, 0);
 
-console.log(total); // 15
+console.log(total);
+// Ожидаемый результат: 15
 ```
 
 ```javascript
@@ -65,7 +70,8 @@ const array = [1, 2, 3, 4, 5];
 
 const total = array.reduce((acc, item) => acc + item, 0);
 
-console.log(total); // 15
+console.log(total);
+// Ожидаемый результат: 15
 ```
 
 Эффект при использовании [обещаний](../../new-features/promise/README.md) может быть
@@ -115,7 +121,8 @@ var person = {
   }
 };
 
-console.log(person.showName()); // Tamik
+console.log(person.showName());
+// Ожидаемый результат: "Tamik"
 ```
 
 ```javascript
@@ -125,7 +132,8 @@ const person = {
   showName: () => this.name,
 };
 
-console.log(person.showName()); // undefined
+console.log(person.showName());
+// Ожидаемый результат: undefined
 ```
 
 ```javascript
@@ -139,7 +147,8 @@ var person = {
   }
 };
 
-person.showName(); // undefined
+person.showName();
+// Ожидаемый результат: undefined
 ```
 
 ```javascript
@@ -151,7 +160,8 @@ const person = {
   },
 };
 
-person.showName(); // Tamik
+person.showName();
+// Ожидаемый результат: "Tamik"
 ```
 
 Стрелочные функции позволяет избавиться от большинства проблем с замыканиям
@@ -190,9 +200,10 @@ function getServices() {
   return ['Market', 'Maps', 'Music'];
 }
 
-console.log(getPerson()); // { name: 'Tamik', age: 19 }
-
-console.log(getServices()); // ['Market', 'Maps', 'Music']
+console.log(getPerson());
+// Ожидаемый результат: {name: "Tamik", age: 19}
+console.log(getServices());
+// Ожидаемый результат: ["Market", "Maps", "Music"]
 ```
 
 ```javascript
@@ -204,9 +215,10 @@ const getPerson = () => ({
 
 const getServices = () => (['Market', 'Maps', 'Music']);
 
-console.log(getPerson()); // { name: 'Tamik', age: 19 }
-
-console.log(getServices()); // ['Market', 'Maps', 'Music']
+console.log(getPerson());
+// Ожидаемый результат: {name: "Tamik", age: 19}
+console.log(getServices());
+// Ожидаемый результат: ["Market", "Maps", "Music"]
 ```
 
 Стрелочная функция может быть IIFE<sup>1</sup>.
@@ -214,13 +226,15 @@ console.log(getServices()); // ['Market', 'Maps', 'Music']
 ```javascript
 // ECMAScript 5
 (function() {
-  console.log('IIFE');
+  // ...
 })();
 ```
 
 ```javascript
 // ECMAScript 6
-(() => console.log('IIFE'))();
+(() => {
+  // ...
+})();
 ```
 
 Стрелочные функции не могут быть конструкторами, с ними нельзя использовать

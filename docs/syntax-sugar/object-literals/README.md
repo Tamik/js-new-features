@@ -19,7 +19,8 @@ var obj = {
   b: b
 };
 
-console.log(obj); // {a: 5, b: 5}
+console.log(obj);
+// Ожидаемый результат: {a: 5, b: 5}
 ```
 
 Благодаря добавлению кратких свойств, теперь присваивание свойствам значения
@@ -35,7 +36,8 @@ const obj = {
   b,
 };
 
-console.log(obj); // {a: 5, b: 5}
+console.log(obj);
+// Ожидаемый результат: {a: 5, b: 5}
 ```
 
 Также при определении метода у объекта теперь не придётся присваивать значение со
@@ -50,7 +52,8 @@ var obj = {
   }
 }
 
-obj.fn(false); // false
+obj.fn(false);
+// Ожидаемый результат: false
 ```
 
 Теперь можно определять методы прямо в объекте:
@@ -64,7 +67,8 @@ const obj = {
   },
 };
 
-obj.fn(false); // false
+obj.fn(false);
+// Ожидаемый результат: false
 ```
 
 Также появилась возможность использовать вычисляемые свойства:
@@ -79,8 +83,11 @@ const obj = {
 
 obj[`prefix_${appConst}`] = false;
 
-console.log(obj.string('value')); // {v: 'value'}
-console.log(obj.prefix_string); // false
+console.log(obj.string('value'));
+// Ожидаемый результат: {v: "value"}
+
+console.log(obj.prefix_string);
+// Ожидаемый результат: false
 ```
 
 Помимо прочего, ещё со стандарта ECMAScript 5 существуют геттеры и сеттеры,
@@ -98,11 +105,14 @@ const obj = {
   },
 };
 
-console.log(obj.id); // 1
+console.log(obj.id);
+// Ожидаемый результат: 1
 
 obj.id = 5;
 
-console.log(obj.id); // 5
+console.log(obj.id);
+// Ожидаемый результат: 5
 
-console.log(obj.__id); // 5
+console.log(obj.__id);
+// Ожидаемый результат: 5
 ```

@@ -13,7 +13,8 @@
 // ECMAScript 5
 var COMPANY = 'Yandex';
 
-console.log(COMPANY); // Yandex
+console.log(COMPANY);
+// Ожидаемый результат: "Yandex"
 ```
 
 И в сообществе, до появления `const`, была договорённость, что переменные, объявленные
@@ -53,11 +54,13 @@ const OBJ = {
   prop: true,
 };
 
-console.log(OBJ.prop); // true
+console.log(OBJ.prop);
+// Ожидаемый результат: true
 
 OBJ.prop = false;
 
-console.log(OBJ.prop); // false
+console.log(OBJ.prop);
+// Ожидаемый результат: false
 ```
 
 Это происходит из-за того, что изменяется свойство самого объекта, а не значение постоянной
