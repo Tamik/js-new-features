@@ -2,7 +2,9 @@
 
 #### [Оглавление](../../README.md)
 
-Подробнее на [learn.javascript.ru](https://learn.javascript.ru/intl).
+Интернационализация — это задача, которую, в большинстве случаев, решить непросто,
+но радует то, что в JavaScript имеется API интернационализации, хорошо
+поддерживаемое большинством браузеров.
 
 Примеры:
 
@@ -62,3 +64,5 @@ console.log(i18nDE.format(new Date("2018-04-05")));
 console.log(i18nRU.format(new Date("2018-04-05")));
 // Ожидаемый результат: "05.04.2018"
 ```
+
+Подробнее на [learn.javascript.ru](https://learn.javascript.ru/intl).
