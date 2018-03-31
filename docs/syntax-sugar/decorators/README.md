@@ -133,7 +133,7 @@ const params = {
 function setNetworkParams({internalNetworkOnly, accessLevel}) {
   return function(target) {
     target.internalNetworkOnly = internalNetworkOnly;
-    target.accessLevel = accessLevel
+    target.accessLevel = accessLevel;
   }
 }
 

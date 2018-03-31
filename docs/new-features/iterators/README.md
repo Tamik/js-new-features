@@ -53,4 +53,4 @@ const iterator = {
 
 В отличие от массивов, перебираемые объекты могут не иметь &laquo;длины&raquo; `length`.
 
-Более подробно итераторы можно изучить на [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_generators).
+Более подробно узнать про итераторы можно на [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_generators).
