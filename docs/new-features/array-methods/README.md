@@ -97,9 +97,9 @@ console.log(array.fill(10, 1, 3));
 // Ожидаемый результат: [0, 10, 10, 10, 8]
 ```
 
-### `Array#from`
+### `Array.from`
 
-Метод `Array#from` создаёт новый экземпляр массива `Array` из:
+Метод `Array.from` создаёт новый экземпляр массива `Array` из:
 
 - &laquo;Псевдомассива&raquo;, имеющего свойство `length` и индексированные элементы.
 Например, результат поиска по DOM методом `document.getElementsByClassName()`;
