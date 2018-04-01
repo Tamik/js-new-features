@@ -13,3 +13,4 @@
 - [Оператор разворота](./spread/README.md)
 - [Оператор возведения в степень](./exponentation/README.md)
 - [Шаблонные строки](./template-strings/README.md)
+- [Декораторы](./decorators/README.md)
