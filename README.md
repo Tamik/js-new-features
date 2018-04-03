@@ -31,7 +31,9 @@
 - Цикл `for..of`
   - [&laquo;ES6: Цикл for .. of&raquo;](http://jsraccoon.ru/es6-for-of-loop)
   - [&laquo;for..of loop&raquo;](http://putaindecode.io/en/articles/js/es2015/for-of/)
-- [Обещания](./docs/new-features/promise/README.md)
+- Обещания
+  - [LearnJS](https://learn.javascript.ru/promise)
+  - [Getinstance](https://getinstance.info/articles/javascript/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hel/)
 - `async`/`await`
   - [&laquo;Async/await: 6 причин забыть о промисах&raquo;](https://habrahabr.ru/company/ruvds/blog/326074/)
   - [&laquo;Async/Await explained through a clear example&raquo;](https://codeburst.io/javascript-es-2017-learn-async-await-by-example-48acc58bad65)
