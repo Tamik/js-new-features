@@ -44,7 +44,7 @@
   - [Краткое описание](./docs/new-features/iterators/README.md)
   - [Полное описание](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_generators) (MDN)
 - [Модули](./docs/new-features/module/README.md)
-- [Новые методы `Array`](./docs/new-features/array-includes/README.md)
+- [Новые методы `Array`](./docs/new-features/array-methods/README.md)
 - Типы структур данных
   - [`Map`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)
   - [`WeakMap`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
